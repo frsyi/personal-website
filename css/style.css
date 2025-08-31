@@ -67,7 +67,7 @@ nav.scrolled {
   top: 10px;
   color: white;
   font-size: 2rem;
-  display: none;
+  display: none !important;
 }
 
 .nav-links {
@@ -284,7 +284,7 @@ section + section {
   align-items: center;
   justify-content: center;
   padding: 3rem 2rem;
-  margin-top: 80px;
+  margin-top: 60px;
 }
 
 .about-container {
@@ -634,9 +634,16 @@ footer .social-links {
 }
 
 footer .social-links a {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 40px;
+  height: 40px;
+  border-radius: 50%;
+  font-size: 18px;
   color: var(--primary-color);
-  font-size: 1.3rem;
-  transition: color 0.3s, transform 0.3s;
+  border: 2px solid var(--primary-color);
+  transition: 0.3s;
 }
 
 footer .social-links a:hover {
@@ -647,6 +654,10 @@ footer .social-links a:hover {
 
 /* Responsive*/
 @media (max-width: 768px) {
+  body {
+    overflow-y: visible;
+  }
+
   nav .logo {
     position: absolute;
     top: 16px;
@@ -657,6 +668,8 @@ footer .social-links a:hover {
   .hero {
     display: flex;
     flex-direction: column;
+    text-align: center;
+    align-items: center;
   }
 
   .nav-links {
@@ -665,21 +678,81 @@ footer .social-links a:hover {
 
   .hamburg,
   .cancel {
-    display: block;
+    display: block !important;
   }
 
   .hero .content {
     width: 80%;
+    text-align: center;
   }
 
-  .social-links i {
-    width: 2.5rem;
-    height: 2.5rem;
-    font-size: 1.5rem;
+  .social-links a {
+    width: 35px;
+    height: 35px;
+    font-size: 16px;
   }
 
   .hero .image {
-    width: 80%;
+    width: 200px;
+    height: 200px;
     margin-bottom: 0px;
+  }
+
+  .about {
+    margin-top: 20px;
+  }
+  .about-container {
+    flex-direction: column;
+    text-align: center;
+  }
+
+  .about-image img {
+    width: 200px;
+    height: 200px;
+  }
+
+  .about-content {
+    flex: none;
+    width: 100%;
+  }
+
+  .timeline {
+    padding: 0 1.2rem;
+  }
+
+  .timeline-item {
+    margin-bottom: 1.5rem;
+
+    .timeline-content {
+      padding: 1rem;
+    }
+  }
+
+  .blog h1 {
+    font-size: 2rem;
+  }
+
+  .blog .subtitle {
+    font-size: 1rem;
+  }
+
+  .blog-content h3 {
+    font-size: 1.1rem;
+  }
+
+  .blog-content p {
+    font-size: 0.9rem;
+    line-height: 1.4;
+  }
+
+  .read-more {
+    font-size: 0.85rem;
+    padding: 0.4rem 0.8rem;
+  }
+
+  footer .social-links a {
+    width: 30px;
+    height: 30px;
+    font-size: 16px;
   }
 }

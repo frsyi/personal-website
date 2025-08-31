@@ -29,9 +29,11 @@
         </div>
         <div class="dropdown">
           <div class="links">
-            <a href="index.html">Home</a> <a href="about.html">About</a>
-            <a href="portfolio.html">Portfolio</a> <a href="blog.html">Blog</a>
-            <i class="fa-solid fa-xmark"></i>
+            <a href="index.html">Home</a>
+            <a href="about.html">About</a>
+            <a href="portfolio.html">Portfolio</a>
+            <a href="blog.html">Blog</a>
+            <i class="fa-solid fa-xmark cancel" onclick="cancel()"></i>
           </div>
         </div>
       </nav>
@@ -73,6 +75,10 @@
       function hamburg() {
         const navbar = document.querySelector(".dropdown");
         navbar.style.transform = "translateY(0px)";
+      }
+      function cancel() {
+        const navbar = document.querySelector(".dropdown");
+        navbar.style.transform = "translateY(-50px)";
       }
     </script>
   </body>
