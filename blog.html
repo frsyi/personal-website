@@ -11,7 +11,6 @@
     />
   </head>
   <body>
-    <!-- Navbar -->
     <header>
       <nav>
         <div class="navbar">
@@ -28,7 +27,6 @@
       </nav>
     </header>
 
-    <!-- Blog Section -->
     <section class="blog">
       <h1>My Blog</h1>
       <p class="subtitle">Tulisan, catatan, dan pemikiran saya ✍️</p>
@@ -54,5 +52,33 @@
         </div>
       </div>
     </section>
+
+    <footer>
+      <div class="footer-container">
+        <div class="social-links">
+          <a href="https://github.com/username" target="_blank"
+            ><i class="fab fa-github"></i
+          ></a>
+          <a href="https://linkedin.com/in/username" target="_blank"
+            ><i class="fab fa-linkedin"></i
+          ></a>
+          <a href="mailto:emailkamu@gmail.com"
+            ><i class="fas fa-envelope"></i
+          ></a>
+        </div>
+        <p>&copy; 2025 Fahma Rosyidah. All Rights Reserved.</p>
+      </div>
+    </footer>
+
+    <script>
+      window.addEventListener("scroll", function () {
+        const nav = document.querySelector("nav");
+        if (window.scrollY > 50) {
+          nav.classList.add("scrolled");
+        } else {
+          nav.classList.remove("scrolled");
+        }
+      });
+    </script>
   </body>
 </html>
