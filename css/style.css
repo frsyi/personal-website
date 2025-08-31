@@ -16,15 +16,24 @@ body {
   height: 100vh;
   background: linear-gradient(to right, #050321, #1c0330);
   color: white;
+  padding-top: 10vh;
 }
 
 /* Navbar */
 nav {
   width: 100%;
   height: 10vh;
-  position: sticky;
+  position: fixed;
   top: 0;
+  left: 0;
+  z-index: 1000;
   padding: 10px 50px;
+  background: linear-gradient(to right, #050321, #1c0330);
+}
+
+nav.scrolled {
+  background: rgba(5, 3, 33, 0.7);
+  backdrop-filter: blur(8px);
 }
 
 .navbar {
